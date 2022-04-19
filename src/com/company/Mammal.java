@@ -1,15 +1,15 @@
 package com.company;
 
-public class Mammal extends Animal {
+public class Mammal extends Animal implements AnimalBehavior, AnimalMove,AnimalName{
     private String styleElton55337;
     public Mammal(){
         super();
         styleElton55337=" ";
     }
     public Mammal(String name,int age , int weight , String style){
-        super();
+        super(name,age, weight);
         this.styleElton55337 = style;
-    }
+    }   ;
     public Mammal(int age , String style){
         super(age);
         this.styleElton55337= style;
@@ -36,5 +36,19 @@ public class Mammal extends Animal {
 
     public String ToStringElton55337(){
         return "Mammal :\n "+"style : "+styleElton55337;
+    }
+
+
+
+
+    @Override
+    public void moveElton55337() {
+        System.out.println("walk");
+}
+
+
+    @Override
+    public void sleep() {
+
     }
 }

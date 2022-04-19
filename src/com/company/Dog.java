@@ -1,6 +1,6 @@
 package com.company;
 
-public class Dog extends Mammal{
+public class Dog extends Mammal implements AnimalBehavior, AnimalMove{
 
     private String featherColorElton55337;
     Dog(){
@@ -15,7 +15,9 @@ public class Dog extends Mammal{
         super(age,style);
         this.featherColorElton55337 =  featherColorElton55337;
     }
-    public void Run(){System.out.println("Go and run");}
+    public void Run(){
+        System.out.println("Go and run");
+    }
 
     @Override
     public void WalkElton55337() {
@@ -27,10 +29,17 @@ public class Dog extends Mammal{
         System.out.println("mooooo");
     }
 
+
+
+
+
     @Override
     public void eatElton55337(String meal) {
         System.out.println("Eat all the food");
     }
+
+
+
     public String getFeatherColorElton55337(){
         return this.featherColorElton55337;
     }
@@ -41,4 +50,17 @@ public class Dog extends Mammal{
         return "Dog :\n "+"Favorite Color : "+getFeatherColorElton55337();
     }
 
+
+
+    @Override
+     public void moveElton55337() {
+        System.out.println("run");
+
 }
+
+    @Override
+    public void sleep() {
+        System.out.println("mmmmm");
+    }
+}
+

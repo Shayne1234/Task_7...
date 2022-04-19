@@ -1,6 +1,6 @@
 package com.company;
 
-  public class BlowFish extends Fish{
+  public class BlowFish extends Fish implements AnimalBehavior, AnimalMove{
         private String TypeElton55337;
 
         public BlowFish(){
@@ -20,7 +20,7 @@ package com.company;
 
         @Override
         public void food_type() {
-            System.out.println("The Blowfish is looking for something to eat ");
+            System.out.println("Go to the sea and feed the BlowFish ");
         }
 
         @Override
@@ -42,5 +42,18 @@ package com.company;
         public String ToString(){
             return "BlowFish :\n "+"Type : "+TypeElton55337;
         }
-    }
+
+      @Override
+      public void sleep() {
+          System.out.println("shhh");
+
+      }
+      @Override
+      public void moveElton55337 () {
+          System.out.println("swim");
+
+      }
+  }
+
+
 

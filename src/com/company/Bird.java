@@ -1,7 +1,6 @@
 package com.company;
 
-
-class Bird extends Animal{
+class Bird extends Animal implements AnimalBehavior,AnimalMove{
 
     private String Type_BirdElton55337;
 
@@ -30,6 +29,12 @@ class Bird extends Animal{
     public void eatElton55337(String meal) {
         System.out.println("Bird is eating a "+ meal);
     }
+
+    @Override
+    void eat(String FoodName) {
+
+    }
+
     public String getTypeElton55337(){
         return this.Type_BirdElton55337;
     }
@@ -38,6 +43,18 @@ class Bird extends Animal{
     }
     public String ToString(){
         return "Bird :\n "+"Type of Bird : "+Type_BirdElton55337;
+    }
+
+
+    @Override
+    public void sleep() {
+        System.out.println( );
+    }
+
+    @Override
+    public void moveElton55337() {
+        System.out.println( "fly");
+
     }
 }
 

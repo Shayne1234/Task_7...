@@ -1,6 +1,6 @@
 package com.company;
 
-abstract class Animal {
+public abstract class Animal implements AnimalMove,AnimalName {
     private String nameElton55337;
     private int ageElton55337;
     private int weightElton55337;
@@ -26,15 +26,19 @@ abstract class Animal {
     }
 
 
-    public abstract void eat(String FoodName);
+    public abstract void moveElton55337();
+
+    abstract void eat(String FoodName);
 
     abstract void getVoiceElton55337();
 
     public String getName(){
+
         return nameElton55337;
     }
 
     public void setName(String name){
+
         this.nameElton55337 = name;
     }
     public int getAge(){
@@ -53,6 +57,26 @@ abstract class Animal {
     }
 
 }
+interface AnimalBehavior{
+   void sleep();
+
+
+}
+
+interface AnimalMove {
+   public default void moveElton55337() {
+        System.out.println("AmimalMove:"  );
+
+    }
+}
+
+interface AnimalName{
+    public static void name (String name) {
+        System.out.println("Name of animal:" + name);
+    }
+
+}
+
 
 
 

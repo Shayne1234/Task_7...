@@ -1,6 +1,7 @@
 package com.company;
 
- class Fish extends Animal{
+
+class Fish extends Animal implements AnimalMove, AnimalBehavior{
 
     private String typeElton55337;
 
@@ -28,6 +29,12 @@ package com.company;
     public void eatElton55337(String meal) {
         System.out.println("Fish is eating a "+ meal);
     }
+
+    @Override
+    void eat(String FoodName) {
+
+    }
+
     public String getTypeElton55337(){
         return this.typeElton55337;
     };
@@ -38,4 +45,14 @@ package com.company;
         return "Fish :\n " + "Type of Fish : "+ typeElton55337;
     }
 
+    @Override
+    public void sleep() {
+        System.out.println("faaaaa");
+    }
+
+    @Override
+    public void moveElton55337() {
+        System.out.println("swim" );
+
+    }
 }
